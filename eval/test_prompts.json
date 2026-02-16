@@ -1,0 +1,71 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "task": "What are the key strategies for improving supply chain resilience and managing disruptions?",
+      "expected_sources": ["Supply Chain Resilience.pdf"],
+      "category": "Resilience Strategy"
+    },
+    {
+      "id": 2,
+      "task": "Explain the fundamentals of supply chain management and logistics best practices.",
+      "expected_sources": ["Supply Chain Management and Logistics.pdf", "SupplychainManagement.pdf"],
+      "category": "Supply Chain Fundamentals"
+    },
+    {
+      "id": 3,
+      "task": "What are the critical components of supply chain coordination and collaboration?",
+      "expected_sources": ["Supply Chain Coordination.pdf"],
+      "category": "Coordination"
+    },
+    {
+      "id": 4,
+      "task": "How should we measure and optimize supply chain performance metrics?",
+      "expected_sources": ["Measuring SC Perf.pdf"],
+      "category": "Performance Metrics"
+    },
+    {
+      "id": 5,
+      "task": "Provide an analysis of global supply chain security and risk management approaches.",
+      "expected_sources": ["Global Supply Chain Security.pdf"],
+      "category": "Security & Risk"
+    },
+    {
+      "id": 6,
+      "task": "What are the key drivers in the evolution of supply chain management practices?",
+      "expected_sources": ["Supply Chain Evolution.pdf"],
+      "category": "Evolution & Trends"
+    },
+    {
+      "id": 7,
+      "task": "Explain reverse supply chain management and its strategic importance.",
+      "expected_sources": ["Reverse Supply Chain Management.pdf"],
+      "category": "Reverse Logistics"
+    },
+    {
+      "id": 8,
+      "task": "Compare supply chain resilience strategies with coordination approaches and recommend an integrated framework.",
+      "expected_sources": ["Supply Chain Resilience.pdf", "Supply Chain Coordination.pdf"],
+      "category": "Multi-Document Strategy"
+    },
+    {
+      "id": 9,
+      "task": "Create a client email and action items for implementing supply chain security measures.",
+      "expected_sources": ["Global Supply Chain Security.pdf"],
+      "category": "Structured Output"
+    },
+    {
+      "id": 10,
+      "task": "Develop a comprehensive supply chain optimization strategy integrating resilience, coordination, and performance measurement.",
+      "expected_sources": ["Supply Chain Resilience.pdf", "Supply Chain Coordination.pdf", "Measuring SC Perf.pdf"],
+      "category": "Strategic Planning"
+    }
+  ],
+  "acceptance_criteria": {
+    "end_to_end_routing": "All agents execute in sequence without errors",
+    "citations_included": "Every claim includes document name and chunk ID",
+    "verifier_blocks_claims": "Verifier marks unsupported claims as [NOT FOUND IN SOURCES]",
+    "trace_log_visible": "Complete trace log shows all agent inputs/outputs",
+    "local_startup": "System runs locally within 5 minutes"
+  }
+}
