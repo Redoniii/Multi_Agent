@@ -6,7 +6,7 @@ from retrieval.vector_store import retrieve
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-SIMILARITY_THRESHOLD = 0.35  # L2 distance threshold (stricter: reject off-topic queries)
+SIMILARITY_THRESHOLD = 0.5  # L2 distance threshold (stricter: reject off-topic queries)
 
 def research_agent(task):
     """
