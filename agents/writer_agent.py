@@ -40,8 +40,8 @@ def writer_agent(notes, output_type="executive"):
     
     Generate a JSON response with these exact fields:
     {{
-        "executive_summary": "Max 150 words summarizing key findings",
-        "client_email": "Professional email format with greeting and closing",
+        "executive_summary": "Min 250 words summarizing key findings",
+        "client_email": "A professional client email: greeting, summary of findings, 2-3 recommendations (bulleted), closing. Be concise and client-focused.",
         "action_list": [
             {{"owner": "Team/Person", "due_date": "YYYY-MM-DD format", "confidence": "High|Medium|Low", "description": "Action item"}}
         ],
