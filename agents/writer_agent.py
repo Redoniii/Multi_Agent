@@ -52,15 +52,13 @@ def writer_agent(notes, output_type="executive"):
     """
     
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
     
     result_text = response.choices[0].message.content
     
-    # Try to parse as JSON, otherwise return as structured text
     try:
-        # Extract JSON from response if it's wrapped in markdown
         if "```json" in result_text:
             json_str = result_text.split("```json")[1].split("```")[0].strip()
         elif "```" in result_text:
@@ -70,7 +68,7 @@ def writer_agent(notes, output_type="executive"):
         
         return json.loads(json_str)
     except json.JSONDecodeError:
-        # Fallback: return structured dict with the raw response
+        #Fallback: return structured dict with the raw response
         return {
             "executive_summary": result_text[:150],
             "client_email": f"Subject: Supply Chain Analysis\n\n{result_text}",
