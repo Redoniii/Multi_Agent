@@ -27,7 +27,7 @@ with col1:
 with col2:
     st.subheader("📊 Quick Info")
     st.metric("Agents", "4", "Plan → Research → Draft → Verify")
-    st.metric("Documents", "9", "Supply Chain Management")
+    st.metric("Documents", "8", "Supply Chain Management")
     st.metric("Citations", "Full Tracking", "Document + Chunk ID")
 
 #Run system
